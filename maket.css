@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+}
+header, section {
+    text-align: center;
+    padding: 50px 20px;
+}
+.logo-img {
+    width: 180px;
+    animation: fadeInZoom 2s ease-in-out;
+}
+@keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #0066cc;
+    white-space: nowrap;
+    margin: 30px auto;
+    letter-spacing: .1em;
+    font-size: 24px;
+    color: #003366;
+    width: fit-content;
+    animation: typing 3s steps(40, end) forwards;
+    position: relative;
+}
+.typewriter::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #0066cc;
+    animation: blink-caret 0.75s step-end 4, hide-caret 0s ease 3s forwards;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes moveLoop {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+/* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0066cc; }
+} */
+@keyframes blink-caret {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+@keyframes hide-caret {
+    to { opacity: 0; }
+  }
+.section-title {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+.button-container button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-container button:hover {
+    background-color: #005f99;
+}
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.event-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.achievement-item {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+footer {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.center-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 17px;
+    width: 65%;
+    
+}
